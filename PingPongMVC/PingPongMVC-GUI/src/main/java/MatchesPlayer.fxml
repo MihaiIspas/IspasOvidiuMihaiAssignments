@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="433.0" prefWidth="648.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="229.0" layoutY="14.0" text="Player Window">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="283.0" layoutY="57.0" text="Matches">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <TableView fx:id="matchesTable" layoutX="40.0" layoutY="123.0" onMouseClicked="#matchesTableAction" prefHeight="250.0" prefWidth="560.0">
+        <columns>
+          <TableColumn fx:id="nameColMatchesTable" prefWidth="113.0" text="Name" />
+          <TableColumn fx:id="scoreColMatchesTable" prefWidth="57.0" text="Score" />
+            <TableColumn fx:id="statusColMatchesTable" prefWidth="107.0" text="Status" />
+            <TableColumn fx:id="player1ColMatchesTable" prefWidth="64.0" text="Player 1" />
+            <TableColumn fx:id="player2ColMatchesTable" prefWidth="63.0" text="Player 2" />
+            <TableColumn fx:id="winnerColMatchesTable" prefWidth="64.0" text="Winner" />
+        </columns>
+      </TableView>
+      <Button layoutX="78.0" layoutY="89.0" mnemonicParsing="false" onAction="#updateScoreMatchesAction" text="Update Score" />
+      <Label fx:id="currentMatchesLabel" layoutX="178.0" layoutY="93.0" text="Current Match : " />
+      <Button layoutX="274.0" layoutY="387.0" mnemonicParsing="false" onAction="#enrollAction" text="Enroll" />
+      <Button layoutX="320.0" layoutY="387.0" mnemonicParsing="false" onAction="#backMatchesAction" text="Back" />
+      <Button layoutX="507.0" layoutY="89.0" mnemonicParsing="false" onAction="#currentMatchesAction" text="Current Match" />
+      <Label fx:id="cantEnrollLabel" layoutX="40.0" layoutY="379.0" text=" " />
+      <Button layoutX="78.0" layoutY="61.0" mnemonicParsing="false" onAction="#updateOpScoreMatchesAction" text="Update Opponent Score" />
+      <Label fx:id="accountLabel" layoutX="507.0" layoutY="65.0" text="Account :" />
+      <Label fx:id="userNameLabel" layoutX="26.0" layoutY="31.0" text="Your username :" />
+      <Label fx:id="nameLabel" layoutX="26.0" layoutY="14.0" text="Your name : " />
+   </children>
+</AnchorPane>

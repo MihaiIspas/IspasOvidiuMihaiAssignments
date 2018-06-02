@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="358.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="213.0" layoutY="22.0" text="Tournaments">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tournamentsTable" layoutX="40.0" layoutY="67.0" onMouseClicked="#tableAction" prefHeight="257.0" prefWidth="397.0">
+        <columns>
+          <TableColumn fx:id="tournamentsNameCol" prefWidth="97.0" text="Name" />
+            <TableColumn fx:id="tournamentsPriceCol" minWidth="0.0" prefWidth="51.0" text="Price" />
+          <TableColumn fx:id="tournamentsStatusCol" prefWidth="121.0" text="Status" />
+            <TableColumn fx:id="tournamentsDateCol" prefWidth="58.0" text="Date" />
+            <TableColumn fx:id="availablePlacesCol" prefWidth="75.0" text="Available" />
+        </columns>
+      </TableView>
+      <Label layoutX="450.0" layoutY="67.0" text="Tournament Name :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tournamentNametf" layoutX="450.0" layoutY="94.0" prefHeight="25.0" prefWidth="143.0" />
+      <CheckBox fx:id="ifPaid" layoutX="450.0" layoutY="200.0" mnemonicParsing="false" onAction="#ifPaidAction" text="Paid Tournament" />
+      <Label fx:id="priceLabel" layoutX="450.0" layoutY="232.0" text="Price :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="450.0" layoutY="130.0" text="Start date :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="startDate" layoutX="452.0" layoutY="155.0" prefHeight="25.0" prefWidth="137.0" />
+      <TextField fx:id="priceTf" layoutX="452.0" layoutY="259.0" prefHeight="25.0" prefWidth="143.0" />
+      <Button layoutX="437.0" layoutY="299.0" mnemonicParsing="false" onAction="#createTournamentAction" prefHeight="25.0" prefWidth="51.0" text="Create" />
+      <Button layoutX="489.0" layoutY="299.0" mnemonicParsing="false" onAction="#updateTournamentAction" prefHeight="25.0" prefWidth="58.0" text="Update" />
+      <Button layoutX="549.0" layoutY="299.0" mnemonicParsing="false" onAction="#deleteTournamentAction" text="Delete" />
+      <Label fx:id="errorLabel" layoutX="438.0" layoutY="336.0" text=" " />
+   </children>
+</AnchorPane>
